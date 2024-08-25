@@ -1,0 +1,44 @@
+// Esperar a que el contenido del DOM esté completamente cargado
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Cambiar el color de fondo cuando se hace clic en el botón de la página de inicio
+    const changeColorBtn = document.getElementById('changeColorBtn');
+    if (changeColorBtn) {
+        changeColorBtn.addEventListener('click', () => {
+            // Generar un color de fondo aleatorio
+            const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+            document.body.style.backgroundColor = randomColor;
+        });
+    }
+
+    // 2. Validación simple del formulario de contacto
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (event) => {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (name === '' || email === '' || message === '') {
+                alert('Por favor, complete todos los campos.');
+                event.preventDefault(); // Evita el envío del formulario si hay campos vacíos
+            } else {
+                alert('Formulario enviado correctamente.');
+            }
+        });
+    }
+
+    // 3. Cambiar el título de la página cuando se pasa el ratón sobre un encabezado
+    const headers = document.querySelectorAll('header h1');
+    headers.forEach(header => {
+        header.addEventListener('mouseover', () => {
+            document.title = '¡Estás sobre el encabezado!';
+        });
+        header.addEventListener('mouseout', () => {
+            document.title = 'Mi Sitio Web'; // Restaurar título original
+        });
+    });
+});
+
+
+
+
