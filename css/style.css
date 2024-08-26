@@ -104,3 +104,53 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+/*Agregando estilos a las cards*/
+.hidden{
+    display: none;
+}
+.cards{
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+}
+ @media (max-width:768px){
+    .cards{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 2rem;
+    }
+ }
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card img{
+    max-width: 90%;
+    width: 50rem;
+    height: auto;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    margin: 0 auto;
+}
+.content-card{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    text-align: justify;
+    border: 1px solid gray;
+    border-radius: 7px;
+    width: 80%;
+    max-width: 90%;
+    margin: 0 auto;
+}
+.text-card{
+    max-width: 90%;
+    margin: 0 auto;
+}
+.btn-card{
+    max-width: 90%;
+    margin: 1rem auto;
+}

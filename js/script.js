@@ -37,6 +37,55 @@ document.addEventListener('DOMContentLoaded', () => {
             document.title = 'Mi Sitio Web'; // Restaurar título original
         });
     });
+
+    
+    const mas1 = document.querySelector('#btnmas1');
+    const cerrar1 = document.querySelector('#btncerrar1')
+    const card1text = document.querySelector('#card1text')
+    mas1.addEventListener('click', function(){
+        card1text.classList.remove('hidden');
+        mas1.classList.add('hidden')
+        cerrar1.classList.remove('hidden');
+        
+    })
+    cerrar1.addEventListener('click', function(){
+        card1text.classList.add('hidden');
+        mas1.classList.remove('hidden')
+        cerrar1.classList.add('hidden');
+
+    })
+
+    const mas2 = document.querySelector('#btnmas2');
+    const cerrar2 = document.querySelector('#btncerrar2')
+    const card2text = document.querySelector('#card2text')
+    mas2.addEventListener('click', function(){
+        card2text.classList.remove('hidden');
+        mas2.classList.add('hidden')
+        cerrar2.classList.remove('hidden');
+        
+    })
+    cerrar2.addEventListener('click', function(){
+        card2text.classList.add('hidden');
+        mas2.classList.remove('hidden')
+        cerrar2.classList.add('hidden');
+
+    })
+
+    const mas3 = document.querySelector('#btnmas3');
+    const cerrar3 = document.querySelector('#btncerrar3')
+    const card3text = document.querySelector('#card3text')
+    mas3.addEventListener('click', function(){
+        card3text.classList.remove('hidden');
+        mas3.classList.add('hidden')
+        cerrar3.classList.remove('hidden');
+        
+    })
+    cerrar3.addEventListener('click', function(){
+        card3text.classList.add('hidden');
+        mas3.classList.remove('hidden')
+        cerrar3.classList.add('hidden');
+
+    })
 });
 
 
