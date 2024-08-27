@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
+    
 </head>
 <body>
     <header>
         <h1>Bienvenido a Kodigo Lab</h1>
         <nav>
-            <ul>
+            <button class="btn-menu"><i class='bx bx-menu'></i></button>
+            <ul class="menu-options">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="about.html">Sobre Nosotros</a></li>
                 <li><a href="contact.html">Contacto</a></li>
+                <li class="switch">
+                    <i class='bx bxs-sun'></i>
+                    <i class='bx bxs-moon'></i>
+                </li>
             </ul>
         </nav>
     </header>
@@ -62,6 +68,6 @@
         <p>&copy; 2024 JavaScript  DOM</p>
 
     </footer>
-
+    <script src="js/script.js" defer></script>
 </body>
 </html>

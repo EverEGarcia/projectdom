@@ -88,6 +88,37 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 });
 
+//CAMBIA Y MANTIENE PREFERENCIAS DE MODO CLARO O MODO OSCURO
+const swith = document.querySelector(".switch");
 
+document.addEventListener("DOMContentLoaded", e =>{
+cargarDarkModeDesdeLocalStorage()
+swith.addEventListener("click", toggleDarkmode)
+})
 
+function toggleDarkmode(){
+  swith.classList.toggle("active");
+  document.body.classList.toggle("active");
+  guardarDarkModeEnLocalStorage(swith.classList.contains("active"))
+}
+
+function guardarDarkModeEnLocalStorage(estado){
+  localStorage.setItem("darkMode", estado)
+}
+
+function cargarDarkModeDesdeLocalStorage(){
+  const darkModeGuardado = localStorage.getItem("darkMode") === "true";
+  if (darkModeGuardado) {
+    swith.classList.add("active");
+  document.body.classList.add("active");
+  }
+}
+
+//CODIGO PARA EL MENU
+const btn_menu = document.querySelector(".btn-menu"),
+      menu_options = document.querySelector(".menu-options");
+
+btn_menu.onclick = () => {
+    menu_options.classList.toggle("active");
+}
 
