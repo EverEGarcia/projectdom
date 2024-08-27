@@ -28,13 +28,63 @@ header h1 {
     margin-bottom: 0.5rem;
 }
 
+nav {
+    /* position: fixed; */
+    width: 100%;
+    top: auto;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    box-shadow: 0px 3px 5px 0px rgba(99, 98, 98, 0.75);
+    z-index: 99;
+    transition: all .4s ease;
+}
+
+nav span {
+    font-size: 2rem;
+}
+
 nav ul {
-    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav .btn-menu {
+    display: none;
+    line-height: 50%;
+    font-size: 2rem;
+    padding: 0 2px;
+    cursor: pointer;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    position: relative;
+    margin: 0 20px;
+    list-style: none;
+    padding-bottom: 5px;
+}
+
+nav ul li::before {
+    content: "";
+    position: absolute; 
+    height: 5px;
+    width: 0;
+    bottom: 0;
+    transition: all .3s ease;
+}
+
+nav ul li:hover::before {
+    content: "";
+    position: absolute; 
+    height: 5px;
+    width: 40px;
+    bottom: 0;
+    
 }
 
 nav ul li a {
@@ -47,10 +97,123 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+
 /* Estilo principal de las secciones */
 main {
     padding: 2rem;
 }
+
+
+/* mas estilos a main por Marlon Flores*/
+
+
+main section:nth-child(2){
+    background-color: #fff;
+    text-align: center;
+    padding: 20px ;
+    transition: all .4s ease;
+}
+
+main section:nth-child(2) h2 {
+    position: relative;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    padding-bottom: 7px;
+}
+
+main section:nth-child(2) h2::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    margin: auto;
+    width: 70px;
+  
+}
+
+main section:nth-child(2) p {
+    width: 50%;
+    margin: auto;
+    font-size: 1.3rem;
+}
+
+.grid-courses {
+    display: grid;
+    padding: 30px;
+    width: 80%;
+    max-width: 1100px;
+    gap: 30px;
+    justify-content: center;
+    margin: auto ;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-bottom: 50px;
+    
+}
+
+.grid-courses .grid-course-cont {
+    position: relative;
+    border-radius: 10px;
+    height: 24rem;
+    padding: 1.2rem;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0px 0px 5px 2px rgba(156,151,156,1);
+}
+
+.bg-color {
+    border-radius: 10px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-blend-mode: overlay;
+    z-index: 3;
+} 
+
+.cont {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    
+}
+
+.cont i {
+    font-size: 2.5rem;
+}
+
+.cont h3 {
+    font-size: 2rem;
+}
+
+.cont p {
+    font-size: 1rem;
+}
+
+.blue {
+    background-color: #2193b0ce;
+}
+
+.yellow {
+    background-color: #d1ce08d1;
+}
+
+.purp {
+    background-color: #8000ffdc;
+}
+
+.green {
+    background-color: #3ca021;
+}
+
+/*Terminan estilos adicionales al main*/
+
+
 
 /* Sección principal */
 section {
@@ -60,7 +223,7 @@ section {
 /* Botón */
 button {
     background: #007bff;
-    color: #fff;
+    color: #333;
     border: none;
     padding: 0.5rem 1rem;
     font-size: 1rem;
@@ -100,7 +263,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    position: fixed;
+   /*  position: fixed; */
     width: 100%;
     bottom: 0;
 }
@@ -158,7 +321,7 @@ footer {
 /*ESTILOS DE SWITCH*/
 
 .switch {
-    width: 60px;
+    width: 4rem;
     height: 30px;
     padding: 0 5px;
     display: flex;
@@ -212,11 +375,7 @@ body.active nav ul {
 }
 
 body.active nav ul li a {
-    color:#f5f4f3;
-}
-
-body.active .header__info {
-    background-color: #333;
+    color:#fff;
 }
 
 body.active h1 {
@@ -227,7 +386,18 @@ body.active h2 {
     color: #f5f4f3;
 }
 
+body.active h3 {
+    color: #f5f4f3;
+}
+
 body.active p {
+    color: #f5f4f3;
+}
+body.active label {
+    color: #f5f4f3;
+}
+
+body.active span {
     color: #f5f4f3;
 }
 
@@ -244,7 +414,7 @@ body.active main section:first-child article h2 {
 }
 
 body.active main section:first-child article p {
-    color: #bdbdbd;
+    color: #fff;
 }
 
 body.active main section:nth-child(2) {
@@ -257,4 +427,83 @@ body.active main section:nth-child(2) h2 {
 
 body.active main section:nth-child(2) > p{
     color: #bdbdbd;
+}
+
+@media screen and (max-width:600px) {
+    html {
+        font-size: 12px;
+    }
+
+    header .foto {
+        display: none;
+    }
+
+    nav ul {
+        position:absolute;
+        top: 0;
+        z-index: -1;
+        padding-top: 2rem;
+        left: 0;
+        right: 0;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+        background-color: #333;
+        flex-direction: column;
+        box-shadow: 0px 3px 1px 0px rgba(99, 98, 98, 0.75);
+    }
+
+   nav ul.active {
+        transition: all 1s ease;
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+   }
+
+    nav ul li {
+        margin-bottom: 1rem;
+    }
+
+    nav .btn-menu {
+        display: block;
+    }
+}
+
+@media screen and (max-width:700px) {
+    header .foto {
+        height: 70%;
+        right: -30%;
+    }
+}
+
+
+@media screen and (max-width:800px) {
+   header .foto {
+       right: 0;
+    }
+
+    main section:nth-child(2) p {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:1100px) {
+ 
+    main section:first-child {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+        padding-bottom: 50px;
+    }
+
+    main section:first-child article {
+        text-align: center;
+        width: 90%;
+    }
+
+    header .foto {
+        right: -30%;
+    }
+
 }
