@@ -122,3 +122,19 @@ btn_menu.onclick = () => {
     menu_options.classList.toggle("active");
 }
 
+//CODIGO JS CRISTIAN RAMIREZ
+
+let links = document.querySelectorAll('.header-contacto .navbar-contacto .link');
+
+links.forEach(target => {
+    target.onclick = function(event){
+        event.preventDefault();
+        let href = target.getAttribute('href');
+        let offetTop = document.querySelector(href).offsetTop;
+
+        scroll({
+            top: offetTop,
+            behavior : 'smooth'
+        })
+    }
+});

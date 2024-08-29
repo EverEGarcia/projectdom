@@ -2,11 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 /* Reseteo básico para márgenes y paddings */
-* {
-    margin: 0;
-    padding: 0;
+*{
     box-sizing: border-box;
-}
+    margin: 0; padding: 0;
+    outline: none; border: none;
+    text-decoration: none;
+ }
 
 /* Estilo general del cuerpo de la página */
 body {
@@ -507,3 +508,49 @@ body.active main section:nth-child(2) > p{
     }
 
 }
+
+/*CSS Cristian Ramirez*/
+/*contenedor de incio en contacto*/
+.header-contacto{
+    background-color: #333;
+    color:#f4f4f4;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+ }
+ 
+ .header-contacto .navbar-contacto{
+    background-color: #333;
+    color:#f4f4f4;
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+ }
+ 
+ .header-contacto .navbar-contacto a{
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    color: #f4f4f4;
+    text-transform: capitalize;
+    flex: 1;
+ }
+ 
+ .header-contacto .navbar-contacto a:hover{
+    background-color: #f4f4f4;
+    color: #333;
+ }
+
+ /*Estilio secciones contacto*/
+
+ .sections{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #333;
+ }
+ 
+ .sections h1{
+    font-size: 80px;
+    text-transform: uppercase;
+ }
