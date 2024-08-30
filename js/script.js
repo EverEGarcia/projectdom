@@ -123,7 +123,7 @@ btn_menu.onclick = () => {
 }
 
 //CODIGO JS CRISTIAN RAMIREZ
-
+//navbar bottom
 let links = document.querySelectorAll('.header-contacto .navbar-contacto .link');
 
 links.forEach(target => {
@@ -139,34 +139,22 @@ links.forEach(target => {
     }
 });
 
-function confettixdxd(){
-    const defaults = {
-        spread: 360,
-        ticks: 50,
-        gravity: 0,
-        decay: 0.94,
-        startVelocity: 30,
-        shapes: ["star"],
-        colors: ["FFE400", "FFBD00", "E89400", "FFCA6C", "FDFFB8"],
-      };
-      
-      function shoot() {
-        confetti({
-          ...defaults,
-          particleCount: 40,
-          scalar: 1.2,
-          shapes: ["star"],
-        });
-      
-        confetti({
-          ...defaults,
-          particleCount: 10,
-          scalar: 0.75,
-          shapes: ["circle"],
-        });
-      }
-      
-      setTimeout(shoot, 0);
-      setTimeout(shoot, 100);
-      setTimeout(shoot, 200);
-}
+//aparecer titulos
+const titlesHome = document.getElementById('titles-home');
+const container = document.getElementById('home');
+container.addEventListener('mouseover', () => {
+    titlesHome.classList.remove('titulos-inicio');
+    titlesHome.classList.add('titulos-inicio-hover');
+})
+
+container.addEventListener('mouseout', () => {
+    titlesHome.classList.remove('titulos-inicio-hover');
+    titlesHome.classList.add('titulos-inicio');
+})
+
+//aparecer mapa
+const mapa = document.getElementById('btn-mapa');
+const contMapa = document.getElementById('map');
+mapa.addEventListener('click', () => {
+    contMapa.classList.toggle('mostrar')
+});

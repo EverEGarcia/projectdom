@@ -25,20 +25,27 @@
             </ul>
         </nav>
     </header>
+    
     <section class="header-contacto">
         <nav class="navbar-contacto">
             <a class="link" href="#home">Inicio</a>
-            <a class="link" href="#form">Registrarse</a>
+            <a class="link" href="#form">Comenta</a>
             <a class="link" href="#redes">Redes sociales</a>
+            
         </nav>
     </section>
-    <section class="sections" id="home">
-            <h1>inicio</h1>
+
+    <section class="sections section-inicio" id="home">
+        <div class="titulos-inicio" id="titles-home">
+            <p>Ponte en contacto</p>
+            <p>Con nuestros</p>
+            <p>Expertos</p>
+        </div>      
     </section>
     
-    <main class="sections" id="form">
+    <main class="sections section-form" id="form">
         <section>
-            <h2>Formulario de Contacto</h2>
+            <h2>¡Queremos saber lo que piensas!</h2>
             <form id="contactForm">
                 <label for="name">Nombre:</label>
                 <input type="text" id="name" name="name" required>
@@ -50,14 +57,31 @@
             </form>
         </section>
     </main>
-    <section class="sections" id="redes">
-        <button type="button" onclick="confettixdxd()">REDES</button>
-    </section>
-    
 
-    <footer>
+    <section class="sections section-redes" id="redes">
+        <div class="redes-info" id="info-contacto">
+            <h1>Más Información</h1>
+            <h3>dirección</h3>
+            <p>dirección de prueba</p>
+            <h3>Teléfono</h3>
+            <p>2299-9999</p>
+            <h3>Redes sociales</h3>
+            <a href="http://whatsapp.com">whatsapp</a>
+            <a href="http://instagram.com">instagram</a>
+            <h3>Ubicación</h3>
+            <button type="button" id="btn-mapa">Mapa</button>
+            
+            
+        </div>
+        <div class="cont-mapa" id="map">
+            <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3880.471653115338!2d-89.05967252582056!3d13.444997904324598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f7cb7235b8a6097%3A0x8689f82833ba7e86!2sAeropuerto%20Internacional%20de%20El%20Salvador%20San%20%C3%93scar%20Arnulfo%20Romero%20y%20Gald%C3%A1mez!5e0!3m2!1ses-419!2ssv!4v1724992990796!5m2!1ses-419!2ssv" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    
+    
+    <footer class="footer-contact">
         <p>&copy; 2024 Proyecto X</p>
-        <br><br><br><br><br>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>

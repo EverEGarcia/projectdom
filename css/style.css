@@ -516,6 +516,7 @@ body.active main section:nth-child(2) > p{
     color:#f4f4f4;
     position: fixed;
     bottom: 0; left: 0; right: 0;
+    margin: 0px;
  }
  
  .header-contacto .navbar-contacto{
@@ -524,6 +525,7 @@ body.active main section:nth-child(2) > p{
     margin: 0 auto;
     max-width: 1200px;
     display: flex;
+    box-shadow: none;
  }
  
  .header-contacto .navbar-contacto a{
@@ -538,18 +540,86 @@ body.active main section:nth-child(2) > p{
  .header-contacto .navbar-contacto a:hover{
     background-color: #f4f4f4;
     color: #333;
+    transition: background-color 1s , color 1s;
  }
 
  /*Estilio secciones contacto*/
 
  .sections{
-    min-height: 100vh;
+    margin: 0px;
+    min-height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
     border-bottom: 2px solid #333;
  }
- .sections h1{
-    font-size: 80px;
-    text-transform: uppercase;
+
+ .section-inicio{
+    background-image: linear-gradient(rgba(209, 209, 209, 0.055), rgba(255, 223, 223, 0.322)), url(https://res.cloudinary.com/dklpgm5tu/image/upload/v1724961367/recetario/jf0jjaylg9achb7uc5rd.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: start;
+    align-items: center;
  }
+ .titulos-inicio-hover{
+    color: #333;
+    margin-left: 2rem;
+    font-weight: bold;
+    text-align: start;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+ .titulos-inicio{
+    visibility: hidden;
+ }
+ 
+/*ajustar el footer para contacto*/
+ .footer-contact{
+    padding-bottom: 100px;
+ }
+/*seccion de contacto -> redes*/
+.section-redes{
+    display: flex;
+    justify-content: space-around;
+}
+.redes-info{
+    width: auto;
+    background-color: #C0C0C0;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+
+    & h1{
+        text-align: center;
+        padding: 0.3rem;
+    }
+    & a{
+        display: block;
+        text-decoration: none;
+        color: #0056b3;
+        padding: 0.3rem;
+    }
+    & p{
+        padding: 0.3rem;
+    }
+    & #btn-mapa {
+        color: #f4f4f4;
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+.cont-mapa{
+    display: none;
+}
+.mostrar{
+    background-color: #C0C0C0;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: inherit;
+
+    & .mapa{
+        border-radius: 0.5rem;
+    }
+}
